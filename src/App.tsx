@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import '../src/index.css';
 import Home from './pages/Home';
 import CreatePost from './pages/CreatePost';
-// import EditPost from './pages/EditPost';
-// import PostCard from './pages/PostCard';
+import EditPost from './pages/EditPost';
+import PostCard from './pages/PostCard';
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -20,8 +20,8 @@ function App() {
       <Routes>
         <Route path="/" index element={<Home posts={posts} />} />
         <Route path="/posts/new" element={<CreatePost />} />
-        {/* <Route path="/posts/edit/:id" element={<EditPost />} />
-        <Route path="/posts/:id" element={<PostCard />} /> */}
+        <Route path="/posts/edit/:id" element={<EditPost />} />
+        <Route path="/posts/:id" element={<PostCard />} />
       </Routes>
     </div>
   );
